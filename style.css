@@ -1,0 +1,1588 @@
+/* =========================
+   GLOBAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #020204;
+    color: white;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+section {
+    min-height: 100vh;
+
+    padding: 120px 8%;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+}
+
+
+/* =========================
+   CINEMATIC INTRO
+========================= */
+
+#intro {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 1000;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #1c1018,
+            #020204 70%
+        );
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    transition: opacity 1.2s ease;
+
+    pointer-events: auto;
+}
+
+
+.introLine {
+    position: absolute;
+
+    width: 90%;
+
+    text-align: center;
+
+    font-family: Georgia, serif;
+
+    font-size: clamp(28px, 5vw, 60px);
+
+    line-height: 1.4;
+
+    color: #eee6eb;
+
+    opacity: 0;
+
+    transform: translateY(20px);
+
+    transition:
+        opacity 1s ease,
+        transform 1s ease;
+}
+
+
+.line1 {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* =========================
+   BIRTHDAY OPENING
+========================= */
+
+#birthday {
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #351521,
+            #080508 70%
+        );
+
+    opacity: 0;
+
+    transform: scale(1.05);
+
+    transition:
+        opacity 1.5s ease,
+        transform 1.5s ease;
+}
+
+
+.birthdaySmall {
+    font-family: monospace;
+
+    font-size: 10px;
+
+    letter-spacing: 5px;
+
+    color: #918993;
+
+    margin-bottom: 25px;
+}
+
+
+#birthday h1 {
+    font-family: Georgia, serif;
+
+    font-weight: normal;
+
+    font-size: clamp(45px, 8vw, 90px);
+
+    line-height: 1.2;
+
+    color: #eee5eb;
+}
+
+
+#birthday h2 {
+    margin-top: 15px;
+
+    font-family: Georgia, serif;
+
+    font-weight: normal;
+
+    font-size: clamp(35px, 6vw, 65px);
+
+    color: #ffabc4;
+}
+
+
+#birthday h2 span {
+    font-size: 0.7em;
+}
+
+
+#birthday p {
+    margin-top: 30px;
+
+    color: #918991;
+
+    font-family: Georgia, serif;
+
+    font-size: 18px;
+}
+
+
+#birthday button {
+    margin-top: 55px;
+
+    padding: 16px 35px;
+
+    border: 1px solid rgba(255,145,181,0.4);
+
+    border-radius: 50px;
+
+    background: transparent;
+
+    color: #ffabc4;
+
+    font-family: monospace;
+
+    letter-spacing: 3px;
+
+    cursor: pointer;
+
+    transition: all 0.4s ease;
+}
+
+
+#birthday button:hover {
+    background: rgba(255,145,181,0.08);
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 40px rgba(255,100,160,0.15);
+}
+
+
+/* =========================
+   COMMON SECTION ELEMENTS
+========================= */
+
+.sectionNumber {
+    font-family: monospace;
+
+    font-size: 11px;
+
+    letter-spacing: 5px;
+
+    color: #6f6870;
+}
+
+
+.sectionTitle {
+    margin-top: 18px;
+
+    font-family: monospace;
+
+    font-size: 10px;
+
+    letter-spacing: 5px;
+
+    color: #9a9098;
+}
+
+
+section h3 {
+    margin-top: 55px;
+
+    font-family: Georgia, serif;
+
+    font-size: clamp(40px, 6vw, 75px);
+
+    font-weight: normal;
+
+    line-height: 1.25;
+
+    color: #eee5eb;
+}
+
+
+/* =========================
+   01 — THE BEGINNING
+========================= */
+
+#story {
+    background:
+        radial-gradient(
+            circle at center,
+            #21121b,
+            #050507 75%
+        );
+}
+
+
+#story > p {
+    margin-top: 50px;
+
+    color: #918991;
+
+    font-family: Georgia, serif;
+
+    font-size: 19px;
+
+    line-height: 2;
+}
+
+
+/* =========================
+   02 — LITTLE MOMENTS
+========================= */
+
+#memories {
+    background:
+        radial-gradient(
+            circle at center,
+            #180f16,
+            #030305 75%
+        );
+}
+
+
+.photoArea {
+    width: min(1000px, 95%);
+
+    margin-top: 80px;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 35px;
+}
+
+
+.memoryCard {
+    position: relative;
+}
+
+
+.memoryCard img {
+    width: 100%;
+
+    aspect-ratio: 4 / 5;
+
+    object-fit: cover;
+
+    border-radius: 18px;
+
+    display: block;
+
+    border: 1px solid rgba(255,255,255,0.1);
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,0.5);
+
+    transition:
+        transform 0.6s ease;
+}
+
+
+.memoryCard:hover img {
+    transform: scale(1.03);
+}
+
+
+.memoryCard p {
+    margin-top: 18px;
+
+    color: #918992;
+
+    font-family: Georgia, serif;
+
+    font-size: 16px;
+
+    font-style: italic;
+}
+
+
+@media (max-width: 700px) {
+
+    .photoArea {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+    .memoryCard {
+        border-radius: 10px;
+    }
+
+}
+
+
+/* =========================
+   03 — THE BEST MOMENTS
+========================= */
+
+#bestMoments {
+    background:
+        radial-gradient(
+            circle at 50% 40%,
+            #24121d,
+            #060508 70%
+        );
+
+    overflow: hidden;
+}
+
+
+.momentIntro {
+    margin-top: 35px;
+
+    color: #918993;
+
+    font-family: Georgia, serif;
+
+    font-size: 18px;
+
+    line-height: 1.8;
+}
+
+
+.bestPhotos {
+    width: min(1000px, 92%);
+
+    margin-top: 90px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 80px;
+}
+
+
+.bestCard {
+    width: 55%;
+
+    transition:
+        transform 0.8s ease;
+}
+
+
+.cardLeft {
+    align-self: flex-start;
+
+    transform: rotate(-3deg);
+}
+
+
+.cardRight {
+    align-self: flex-end;
+
+    transform: rotate(3deg);
+}
+
+
+.bestCard:hover {
+    transform:
+        scale(1.03)
+        rotate(0deg);
+}
+
+
+.bestCard img {
+    width: 100%;
+
+    display: block;
+
+    aspect-ratio: 4 / 5;
+
+    object-fit: cover;
+
+    border-radius: 18px;
+
+    border: 1px solid rgba(255,255,255,0.1);
+
+    box-shadow:
+        0 30px 80px rgba(0,0,0,0.6);
+}
+
+
+@media (max-width: 700px) {
+
+    .bestPhotos {
+        gap: 50px;
+    }
+
+    .bestCard {
+        width: 85%;
+    }
+
+    .cardLeft,
+    .cardRight {
+        align-self: center;
+
+        transform: rotate(0deg);
+    }
+
+}
+
+
+/* =========================
+   04 — LITTLE THINGS
+========================= */
+
+#littleThings {
+    background:
+        radial-gradient(
+            circle at center,
+            #160f17,
+            #030305 75%
+        );
+}
+
+
+.thingsIntro {
+    margin-top: 35px;
+
+    color: #918993;
+
+    font-family: Georgia, serif;
+
+    font-size: 18px;
+
+    line-height: 1.8;
+}
+
+
+.thingsContainer {
+    width: min(1000px, 92%);
+
+    margin-top: 100px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 110px;
+}
+
+
+.thing {
+    display: flex;
+
+    align-items: center;
+
+    gap: 60px;
+
+    width: 85%;
+}
+
+
+.thing.reverse {
+    align-self: flex-end;
+
+    flex-direction: row-reverse;
+}
+
+
+.thing img {
+    width: 52%;
+
+    aspect-ratio: 4 / 5;
+
+    object-fit: cover;
+
+    border-radius: 18px;
+
+    border: 1px solid rgba(255,255,255,0.1);
+
+    box-shadow:
+        0 25px 70px rgba(0,0,0,0.55);
+}
+
+
+.thingText {
+    flex: 1;
+
+    text-align: left;
+}
+
+
+.thing.reverse .thingText {
+    text-align: right;
+}
+
+
+.thingText span {
+    font-family: monospace;
+
+    font-size: 10px;
+
+    letter-spacing: 4px;
+
+    color: #ff91b5;
+}
+
+
+.thingText p {
+    margin-top: 18px;
+
+    font-family: Georgia, serif;
+
+    font-size: clamp(22px, 3vw, 34px);
+
+    line-height: 1.4;
+
+    color: #e8e1e6;
+}
+
+
+@media (max-width: 700px) {
+
+    .thingsContainer {
+        gap: 70px;
+    }
+
+    .thing,
+    .thing.reverse {
+        width: 100%;
+
+        flex-direction: column;
+
+        gap: 25px;
+    }
+
+    .thing img {
+        width: 90%;
+    }
+
+    .thingText,
+    .thing.reverse .thingText {
+        width: 90%;
+
+        text-align: center;
+    }
+
+}
+
+
+/* =========================
+   05 — A LITTLE LETTER
+========================= */
+
+#letter {
+    background:
+        radial-gradient(
+            circle at center,
+            #21131c,
+            #050507 75%
+        );
+
+    min-height: 120vh;
+}
+
+
+.letterBox {
+    width: min(700px, 90%);
+
+    margin-top: 50px;
+
+    padding: 55px 45px;
+
+    text-align: left;
+
+    border-left:
+        1px solid rgba(255,145,181,0.35);
+
+    border-right:
+        1px solid rgba(255,145,181,0.12);
+}
+
+
+.letterBox p {
+    margin-bottom: 28px;
+
+    color: #a9a1a8;
+
+    font-family: Georgia, serif;
+
+    font-size: 18px;
+
+    line-height: 1.9;
+}
+
+
+.letterBox .letterOpening {
+    color: #ffabc4;
+
+    font-size: 26px;
+
+    margin-bottom: 40px;
+}
+
+
+.letterBox .letterHighlight {
+    color: #eee5eb;
+
+    font-size: 23px;
+
+    font-style: italic;
+
+    margin: 45px 0;
+}
+
+
+.letterBox .letterEnd {
+    margin-top: 50px;
+
+    color: #ff9fbd;
+
+    font-size: 22px;
+
+    text-align: center;
+}
+
+
+.letterPhoto {
+    margin-top: 50px;
+
+    width: min(380px, 75%);
+}
+
+
+.letterPhoto img {
+    width: 100%;
+
+    aspect-ratio: 4 / 5;
+
+    object-fit: cover;
+
+    border-radius: 18px;
+
+    border: 1px solid rgba(255,255,255,0.1);
+
+    box-shadow:
+        0 30px 80px rgba(0,0,0,0.6);
+}
+
+
+@media (max-width: 700px) {
+
+    .letterBox {
+        padding: 35px 25px;
+    }
+
+    .letterBox p {
+        font-size: 16px;
+    }
+
+    .letterBox .letterHighlight {
+        font-size: 20px;
+    }
+
+}
+
+
+/* =========================
+   06 — ONE LAST THING
+========================= */
+
+#oneLastThing {
+    background:
+        radial-gradient(
+            circle at center,
+            #2b141f,
+            #060508 75%
+        );
+
+    overflow: hidden;
+}
+
+
+.lastIntro {
+    margin-top: 35px;
+
+    color: #918993;
+
+    font-family: Georgia, serif;
+
+    font-size: 18px;
+
+    line-height: 1.8;
+}
+
+
+.lastPhotos {
+    width: min(1000px, 90%);
+
+    margin-top: 90px;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 18px;
+}
+
+
+.lastPhotos img {
+    width: 100%;
+
+    aspect-ratio: 1 / 1;
+
+    object-fit: cover;
+
+    border-radius: 14px;
+
+    border: 1px solid rgba(255,255,255,0.08);
+
+    opacity: 0.85;
+
+    transition:
+        transform 0.5s ease,
+        opacity 0.5s ease;
+}
+
+
+.lastPhotos img:hover {
+    transform: scale(1.05);
+
+    opacity: 1;
+}
+
+
+.lastMessage {
+    margin-top: 130px;
+
+    padding-bottom: 80px;
+
+    text-align: center;
+}
+
+
+.lastMessage span {
+    font-family: monospace;
+
+    font-size: 11px;
+
+    letter-spacing: 5px;
+
+    color: #8f858d;
+}
+
+
+.lastMessage h4 {
+    margin-top: 35px;
+
+    font-family: Georgia, serif;
+
+    font-weight: normal;
+
+    font-size: clamp(45px, 7vw, 85px);
+
+    line-height: 1.2;
+
+    color: #ffabc4;
+}
+
+
+.lastMessage p {
+    margin-top: 40px;
+
+    color: #aaa1a9;
+
+    font-family: Georgia, serif;
+
+    font-size: 19px;
+
+    line-height: 1.8;
+}
+
+
+.signature {
+    margin-top: 50px;
+
+    color: #ff9fbd;
+
+    font-family: monospace;
+
+    letter-spacing: 3px;
+
+    font-size: 14px;
+}
+
+
+@media (max-width: 700px) {
+
+    .lastPhotos {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 10px;
+    }
+
+    .lastMessage {
+        margin-top: 90px;
+    }
+
+}
+
+
+/* =========================
+   07 — PHOTO STORY
+========================= */
+
+#photoStory {
+    min-height: 140vh;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #21121b,
+            #050507 75%
+        );
+
+    overflow: hidden;
+}
+
+
+.photoStoryContainer {
+    width: min(850px, 90%);
+
+    margin-top: 100px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 150px;
+}
+
+
+.storyPhoto {
+    width: 62%;
+
+    text-align: center;
+}
+
+
+.storyPhoto:nth-child(even) {
+    align-self: flex-end;
+}
+
+
+.storyPhoto img {
+    width: 100%;
+
+    aspect-ratio: 4 / 5;
+
+    object-fit: cover;
+
+    border-radius: 20px;
+
+    border: 1px solid rgba(255,255,255,0.1);
+
+    box-shadow:
+        0 35px 100px rgba(0,0,0,0.65);
+
+    transition:
+        transform 0.8s ease,
+        filter 0.8s ease;
+}
+
+
+.storyPhoto img:hover {
+    transform: scale(1.03);
+}
+
+
+.storyPhoto p {
+    margin-top: 25px;
+
+    font-family: Georgia, serif;
+
+    font-size: 22px;
+
+    font-style: italic;
+
+    color: #aaa0a8;
+}
+
+
+.photoStoryEnd {
+    margin-top: 170px;
+
+    padding-bottom: 100px;
+
+    font-family: Georgia, serif;
+
+    font-size: 28px;
+
+    line-height: 1.8;
+
+    color: #ddd4dc;
+}
+
+
+.photoStoryEnd span {
+    color: #ff9fbd;
+
+    font-size: 22px;
+}
+
+
+@media (max-width: 700px) {
+
+    .photoStoryContainer {
+        gap: 90px;
+    }
+
+    .storyPhoto {
+        width: 85%;
+    }
+
+    .storyPhoto:nth-child(even) {
+        align-self: center;
+    }
+
+    .storyPhoto p {
+        font-size: 18px;
+    }
+
+    .photoStoryEnd {
+        font-size: 22px;
+    }
+
+}
+
+
+/* =========================
+   08 — THE PART WE NEVER PLANNED
+========================= */
+
+#thePart {
+    min-height: 150vh;
+
+    background:
+        radial-gradient(
+            circle at 50% 35%,
+            #1c1118 0%,
+            #080609 45%,
+            #020203 85%
+        );
+
+    position: relative;
+
+    overflow: hidden;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+}
+
+
+.partNumber {
+    margin-top: 20px;
+
+    font-family: monospace;
+
+    font-size: 11px;
+
+    letter-spacing: 5px;
+
+    color: #6f6870;
+}
+
+
+.partTitle {
+    margin-top: 18px;
+
+    font-family: monospace;
+
+    font-size: 10px;
+
+    letter-spacing: 5px;
+
+    color: #9a9098;
+}
+
+
+.partOpening {
+    margin-top: 130px;
+}
+
+
+.partOpening p {
+    margin: 12px 0;
+
+    font-family: Georgia, serif;
+
+    font-size: clamp(28px, 4vw, 48px);
+
+    line-height: 1.4;
+
+    color: #e9e1e7;
+}
+
+
+.partOpening p:last-child {
+    color: #ff9fbd;
+
+    font-style: italic;
+}
+
+
+/* TIMELINE */
+
+.timeline {
+    width: min(700px, 90%);
+
+    margin-top: 130px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+}
+
+
+.timelineItem {
+    width: 100%;
+
+    padding: 45px 25px;
+
+    text-align: center;
+}
+
+
+.timelineItem span {
+    font-family: monospace;
+
+    font-size: 10px;
+
+    letter-spacing: 5px;
+
+    color: #ff91b5;
+}
+
+
+.timelineItem h3 {
+    margin-top: 20px;
+
+    font-family: Georgia, serif;
+
+    font-weight: normal;
+
+    font-size: clamp(32px, 5vw, 55px);
+
+    letter-spacing: 1px;
+
+    color: #eee6eb;
+}
+
+
+.timelineItem p {
+    margin-top: 25px;
+
+    font-family: Georgia, serif;
+
+    font-size: 18px;
+
+    line-height: 1.9;
+
+    color: #918991;
+}
+
+
+.timelineLine {
+    width: 1px;
+
+    height: 90px;
+
+    background:
+        linear-gradient(
+            to bottom,
+            transparent,
+            rgba(255,145,181,0.45),
+            transparent
+        );
+}
+
+
+.timelineItem.now {
+    padding-top: 70px;
+}
+
+
+.timelineItem.now h3 {
+    color: #ffabc4;
+
+    text-shadow:
+        0 0 40px rgba(255,120,170,0.18);
+}
+
+
+/* ENDING */
+
+.partEnding {
+    width: min(700px, 90%);
+
+    margin-top: 120px;
+
+    padding-bottom: 130px;
+}
+
+
+.endingLine {
+    width: 80px;
+
+    height: 1px;
+
+    margin: 0 auto 50px;
+
+    background: rgba(255,145,181,0.4);
+}
+
+
+.partEnding p {
+    font-family: Georgia, serif;
+
+    font-size: 21px;
+
+    line-height: 1.8;
+
+    color: #938a92;
+}
+
+
+.partEnding h4 {
+    margin-top: 25px;
+
+    font-family: Georgia, serif;
+
+    font-size: clamp(26px, 4vw, 42px);
+
+    font-weight: normal;
+
+    line-height: 1.5;
+
+    color: #e8dfe5;
+}
+
+
+@media (max-width: 700px) {
+
+    #thePart {
+        min-height: 130vh;
+    }
+
+    .partOpening {
+        margin-top: 90px;
+    }
+
+    .timeline {
+        margin-top: 90px;
+    }
+
+    .timelineItem {
+        padding: 35px 15px;
+    }
+
+    .timelineItem h3 {
+        font-size: 32px;
+    }
+
+    .timelineItem p {
+        font-size: 16px;
+    }
+
+    .timelineLine {
+        height: 60px;
+    }
+
+    .partEnding {
+        margin-top: 80px;
+    }
+
+}
+
+
+/* =========================
+   09 — JUST ONE MORE THING
+========================= */
+
+#oneMoreThing {
+    min-height: 120vh;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #180d14 0%,
+            #070508 45%,
+            #010102 85%
+        );
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+.moreContent {
+    width: min(850px, 90%);
+}
+
+
+.moreTiny {
+    font-family: monospace;
+
+    font-size: 10px;
+
+    letter-spacing: 6px;
+
+    color: #6f6870;
+
+    margin-bottom: 80px;
+}
+
+
+.morePause {
+    font-family: Georgia, serif;
+
+    font-size: clamp(24px, 3vw, 34px);
+
+    line-height: 1.6;
+
+    font-style: italic;
+
+    color: #958b93;
+}
+
+
+.moreMain {
+    margin-top: 90px;
+
+    font-family: Georgia, serif;
+
+    font-size: clamp(40px, 6vw, 72px);
+
+    line-height: 1.25;
+
+    font-weight: normal;
+
+    color: #eee6eb;
+}
+
+
+.moreDivider {
+    width: 70px;
+
+    height: 1px;
+
+    margin: 90px auto 60px;
+
+    background:
+        linear-gradient(
+            to right,
+            transparent,
+            rgba(255,145,181,0.5),
+            transparent
+        );
+}
+
+
+.moreThought {
+    font-family: Georgia, serif;
+
+    font-size: 18px;
+
+    line-height: 2;
+
+    color: #8f858d;
+}
+
+
+.moreFinalLine {
+    margin-top: 80px;
+
+    font-family: Georgia, serif;
+
+    font-size: clamp(30px, 4vw, 48px);
+
+    line-height: 1.5;
+
+    color: #ffabc4;
+
+    text-shadow:
+        0 0 45px rgba(255,120,170,0.2);
+}
+
+
+.moreArrow {
+    margin-top: 100px;
+
+    font-family: monospace;
+
+    font-size: 20px;
+
+    color: #6f6870;
+
+    animation:
+        arrowFloat 2s ease-in-out infinite;
+}
+
+
+@keyframes arrowFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+
+        opacity: 0.4;
+    }
+
+    50% {
+        transform: translateY(10px);
+
+        opacity: 1;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    #oneMoreThing {
+        min-height: 110vh;
+    }
+
+    .moreTiny {
+        margin-bottom: 60px;
+    }
+
+    .moreMain {
+        margin-top: 60px;
+    }
+
+    .moreDivider {
+        margin: 65px auto 45px;
+    }
+
+    .moreFinalLine {
+        margin-top: 60px;
+    }
+
+    .moreArrow {
+        margin-top: 70px;
+    }
+
+}
+
+
+/* =========================
+   FINAL
+========================= */
+
+#final {
+    min-height: 120vh;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #351521 0%,
+            #10070c 35%,
+            #020204 80%
+        );
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+.finalReveal {
+    width: min(850px, 90%);
+
+    text-align: center;
+}
+
+
+.finalTiny {
+    font-family: monospace;
+
+    font-size: 10px;
+
+    letter-spacing: 5px;
+
+    color: #746b73;
+
+    margin-bottom: 100px;
+}
+
+
+.finalPause {
+    font-family: Georgia, serif;
+
+    font-size: 22px;
+
+    font-style: italic;
+
+    color: #9b9098;
+
+    margin-bottom: 45px;
+}
+
+
+.finalWish {
+    font-family: Georgia, serif;
+
+    font-weight: normal;
+
+    font-size: clamp(45px, 7vw, 85px);
+
+    line-height: 1.2;
+
+    color: #eee5eb;
+}
+
+
+.finalThought {
+    margin-top: 60px;
+
+    font-family: Georgia, serif;
+
+    font-size: 18px;
+
+    line-height: 1.9;
+
+    color: #918991;
+}
+
+
+.finalName {
+    margin-top: 80px;
+
+    font-family: monospace;
+
+    font-size: clamp(28px, 5vw, 50px);
+
+    letter-spacing: 12px;
+
+    color: #ff9fbd;
+
+    text-shadow:
+        0 0 50px rgba(255,120,170,.4);
+}
+
+
+.birthdayFinal {
+    margin-top: 30px;
+
+    font-family: Georgia, serif;
+
+    font-size: clamp(32px, 5vw, 60px);
+
+    color: #fff;
+
+    letter-spacing: 2px;
+}
+
+
+.finalHope {
+    margin-top: 55px;
+
+    font-family: Georgia, serif;
+
+    font-size: 18px;
+
+    line-height: 1.9;
+
+    color: #aaa0a8;
+}
+
+
+.finalSignature {
+    margin-top: 70px;
+
+    font-family: monospace;
+
+    font-size: 12px;
+
+    line-height: 2;
+
+    letter-spacing: 2px;
+
+    color: #716a72;
+}
+
+
+@media (max-width: 700px) {
+
+    .finalTiny {
+        margin-bottom: 70px;
+    }
+
+    .finalThought,
+    .finalHope {
+        font-size: 14px;
+    }
+
+}

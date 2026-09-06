@@ -32,7 +32,8 @@ setTimeout(() => showLine(0), 1000);
 const songs = [
     document.getElementById("song1"),
     document.getElementById("song2"),
-    document.getElementById("song3")
+    document.getElementById("song3"),
+    document.getElementById("song4")
 ];
 const musicButton = document.getElementById("musicButton");
 const musicStatus = document.getElementById("musicStatus");
@@ -121,17 +122,20 @@ musicButton.addEventListener("click", () => {
 /* Song 1: beginning/memories → Song 2: letter/photos → Song 3: personal story/final */
 const song2Trigger = document.getElementById("letter");
 const song3Trigger = document.getElementById("thePart");
+const song4Trigger = document.getElementById("cakeMoment");
 
 const musicObserver = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         if (!entry.isIntersecting || !musicStarted) return;
         if (entry.target === song2Trigger) switchSong(1);
         if (entry.target === song3Trigger) switchSong(2);
+        if (entry.target === song4Trigger) switchSong(3);
     });
 }, { threshold: 0.35 });
 
 if (song2Trigger) musicObserver.observe(song2Trigger);
 if (song3Trigger) musicObserver.observe(song3Trigger);
+if (song4Trigger) musicObserver.observe(song4Trigger);
 
 /* Never loop. Each track advances once; after Song 3, music ends. */
 songs.forEach((song, index) => {

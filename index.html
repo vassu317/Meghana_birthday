@@ -11,7 +11,15 @@
 </head>
 
 <body>
+<!-- BACKGROUND MUSIC -->
+<audio id="song1" src="song1_audio.mp3" preload="auto"></audio>
+<audio id="song2" src="song2_audio.mp3" preload="auto"></audio>
+<audio id="song3" src="song3_audio.mp3" preload="auto"></audio>
 
+<div class="musicControl" id="musicControl">
+    <button id="musicButton" type="button" aria-label="Pause music">♫</button>
+    <span id="musicStatus">MUSIC ON</span>
+</div>
     <!-- =========================
          CINEMATIC INTRO
     ========================== -->
@@ -138,7 +146,7 @@
 
             <div class="memoryCard">
 
-                <img src="WhatsApp Image 2026-09-04 at 15.55.37.jpeg">
+                <img src="photos/WhatsApp Image 2026-09-04 at 15.55.37.jpeg">
 
                 <p>
                     Our first selfie in college, 
@@ -150,7 +158,7 @@
 
             <div class="memoryCard">
 
-                <img src="WhatsApp Image 2026-09-04 at 15.55.37 (20).jpeg">
+                <img src="photos/WhatsApp Image 2026-09-04 at 15.55.37 (20).jpeg">
 
                 <p>
                     Just us being random...Again.
@@ -161,7 +169,7 @@
 
             <div class="memoryCard">
 
-                <img src="WhatsApp Image 2026-09-04 at 15.55.37 (2).jpeg">
+                <img src="photos/WhatsApp Image 2026-09-04 at 15.55.37 (2).jpeg">
 
                 <p>
                     The moment that our hug turn into a beautiful memory...
@@ -172,7 +180,7 @@
 
             <div class="memoryCard">
 
-                <img src="WhatsApp Image 2026-09-04 at 15.55.37 (3).jpeg">
+                <img src="photos/WhatsApp Image 2026-09-04 at 15.55.37 (3).jpeg">
 
                 <p>
                     It was another moment became unforgettable.
@@ -183,7 +191,7 @@
 
             <div class="memoryCard">
 
-                <img src="WhatsApp Image 2026-09-04 at 15.55.37 (4).jpeg">
+                <img src="photos/WhatsApp Image 2026-09-04 at 15.55.37 (4).jpeg">
 
                 <p>
                     Not everything needs a reason,
@@ -195,7 +203,7 @@
 
             <div class="memoryCard">
 
-                <img src="WhatsApp Image 2026-09-04 at 15.55.37 (5).jpeg">
+                <img src="photos/WhatsApp Image 2026-09-04 at 15.55.37 (5).jpeg">
 
                 <p>
                     Some moments don't need words... 
@@ -240,27 +248,27 @@
         <div class="bestPhotos">
 
             <div class="bestCard cardLeft">
-                <img src="WhatsApp Image 2026-09-04 at 15.55.37 (6).jpeg">
+                <img src="photos/WhatsApp Image 2026-09-04 at 15.55.37 (6).jpeg">
             </div>
 
             <div class="bestCard cardRight">
-                <img src="WhatsApp Image 2026-09-04 at 15.55.37 (26).jpeg">
+                <img src="photos/WhatsApp Image 2026-09-04 at 15.55.37 (26).jpeg">
             </div>
 
             <div class="bestCard cardLeft">
-                <img src="WhatsApp Image 2026-09-04 at 15.55.37 (16).jpeg">
+                <img src="photos/WhatsApp Image 2026-09-04 at 15.55.37 (16).jpeg">
             </div>
 
             <div class="bestCard cardRight">
-                <img src="WhatsApp Image 2026-09-04 at 15.55.37 (23).jpeg">
+                <img src="photos/WhatsApp Image 2026-09-04 at 15.55.37 (23).jpeg">
             </div>
 
             <div class="bestCard cardLeft">
-                <img src="WhatsApp Image 2026-09-04 at 15.55.37 (10).jpeg">
+                <img src="photos/WhatsApp Image 2026-09-04 at 15.55.37 (10).jpeg">
             </div>
 
             <div class="bestCard cardRight">
-                <img src="WhatsApp Image 2026-09-04 at 15.55.37 (21).jpeg">
+                <img src="photos/WhatsApp Image 2026-09-04 at 15.55.37 (21).jpeg">
             </div>
 
         </div>
@@ -299,7 +307,7 @@
 
             <div class="thing">
 
-                <img src="WhatsApp Image 2026-09-04 at 15.55.37 (15).jpeg">
+                <img src="photos/WhatsApp Image 2026-09-04 at 15.55.37 (15).jpeg">
 
                 <div class="thingText">
 
@@ -325,7 +333,7 @@
 
             <div class="thing reverse">
 
-                <img src="WhatsApp Image 2026-09-04 at 15.55.37 (13).jpeg">
+                <img src="photos/WhatsApp Image 2026-09-04 at 15.55.37 (13).jpeg">
 
                 <div class="thingText">
 
@@ -350,7 +358,7 @@
 
             <div class="thing">
 
-                <img src="WhatsApp Image 2026-09-04 at 15.55.37 (14).jpeg">
+                <img src="photos/WhatsApp Image 2026-09-04 at 15.55.37 (14).jpeg">
 
                 <div class="thingText">
 
@@ -375,7 +383,7 @@
 
             <div class="thing reverse">
 
-                <img src="WhatsApp Image 2026-09-04 at 15.55.37 (11).jpeg">
+                <img src="photos/WhatsApp Image 2026-09-04 at 15.55.37 (11).jpeg">
 
                 <div class="thingText">
 
@@ -401,7 +409,7 @@
 
             <div class="thing">
 
-                <img src="WhatsApp Image 2026-09-04 at 15.55.37 (8).jpeg">
+                <img src="photos/WhatsApp Image 2026-09-04 at 15.55.37 (8).jpeg">
 
                 <div class="thingText">
 
@@ -442,7 +450,15 @@
         </div>
 
 
-        <div class="letterBox">
+        <div class="letterAtmosphere" aria-hidden="true">
+            <span class="letterDust d1"></span><span class="letterDust d2"></span><span class="letterDust d3"></span>
+        </div>
+
+        <div class="letterSeal" aria-hidden="true">
+            <span>FOR<br>YOU</span>
+        </div>
+
+        <div class="letterBox letterCinematic">
 
             <p class="letterOpening">
                 Dear Maggie,
@@ -533,7 +549,7 @@
 
         <div class="letterPhoto">
 
-            <img src="WhatsApp Image 2026-09-04 at 15.55.37 (3).jpeg">
+            <img src="photos/WhatsApp Image 2026-09-04 at 15.55.37 (3).jpeg">
 
         </div>
 
@@ -563,7 +579,7 @@
 
             <div class="storyPhoto">
 
-                <img src="WhatsApp Image 2026-09-04 at 15.55.37 (11).jpeg">
+                <img src="photos/WhatsApp Image 2026-09-04 at 15.55.37 (11).jpeg">
 
                 <p>
                     “Remember this?”
@@ -574,7 +590,7 @@
 
             <div class="storyPhoto">
 
-                <img src="WhatsApp Image 2026-09-04 at 15.55.37 (19).jpeg">
+                <img src="photos/WhatsApp Image 2026-09-04 at 15.55.37 (19).jpeg">
 
                 <p>
                     “We didn't know it then...”
@@ -585,7 +601,7 @@
 
             <div class="storyPhoto">
 
-                <img src="WhatsApp Image 2026-09-04 at 15.55.37 (18).jpeg">
+                <img src="photos/WhatsApp Image 2026-09-04 at 15.55.37 (18).jpeg">
 
                 <p>
                     “...but these little moments mattered.”
@@ -596,7 +612,7 @@
 
             <div class="storyPhoto">
 
-                <img src="WhatsApp Image 2026-09-04 at 15.55.37 (20).jpeg">
+                <img src="photos/WhatsApp Image 2026-09-04 at 15.55.37 (20).jpeg">
 
                 <p>
                     “And somehow, we kept collecting them.”
@@ -607,7 +623,7 @@
 
             <div class="storyPhoto">
 
-                <img src="WhatsApp Image 2026-09-04 at 15.55.37 (25).jpeg">
+                <img src="photos/WhatsApp Image 2026-09-04 at 15.55.37 (25).jpeg">
 
                 <p>
                     “Some memories don't need an explanation.”
@@ -802,23 +818,23 @@
 
         <div class="lastPhotos">
 
-            <img src="WhatsApp Image 2026-09-04 at 15.55.37 (23).jpeg">
+            <img src="photos/WhatsApp Image 2026-09-04 at 15.55.37 (23).jpeg">
 
-            <img src="WhatsApp Image 2026-09-04 at 15.55.37 (19).jpeg">
+            <img src="photos/WhatsApp Image 2026-09-04 at 15.55.37 (19).jpeg">
 
-            <img src="WhatsApp Image 2026-09-04 at 15.55.37 (17).jpeg">
+            <img src="photos/WhatsApp Image 2026-09-04 at 15.55.37 (17).jpeg">
 
-            <img src="WhatsApp Image 2026-09-04 at 15.55.37 (21).jpeg">
+            <img src="photos/WhatsApp Image 2026-09-04 at 15.55.37 (21).jpeg">
 
-            <img src="WhatsApp Image 2026-09-04 at 15.55.37 (1).jpeg">
+            <img src="photos/WhatsApp Image 2026-09-04 at 15.55.37 (1).jpeg">
 
-            <img src="WhatsApp Image 2026-09-04 at 15.55.37 (22).jpeg">
+            <img src="photos/WhatsApp Image 2026-09-04 at 15.55.37 (22).jpeg">
 
-            <img src="WhatsApp Image 2026-09-04 at 15.55.37 (18).jpeg">
+            <img src="photos/WhatsApp Image 2026-09-04 at 15.55.37 (18).jpeg">
 
-            <img src="WhatsApp Image 2026-09-04 at 15.55.37 (25).jpeg">
+            <img src="photos/WhatsApp Image 2026-09-04 at 15.55.37 (25).jpeg">
 
-            <img src="WhatsApp Image 2026-09-04 at 15.55.37 (24).jpeg">
+            <img src="photos/WhatsApp Image 2026-09-04 at 15.55.37 (24).jpeg">
 
         </div>
 
@@ -854,83 +870,184 @@
     </section>
 
     <!-- =========================
-         FINAL
+         SURPRISE INTERACTION
+    ========================== -->
+
+    <section id="surprise">
+        <div class="surpriseCurtainGlow"></div>
+
+        <div class="surpriseContent">
+            <div class="surpriseTiny">WAIT... BEFORE THIS ENDS</div>
+
+            <h3 class="surpriseTitle">
+                I saved one little thing
+                <br>
+                just for you.
+            </h3>
+
+            <p class="surpriseHint">
+                You've seen the memories.
+                <br>
+                You've seen the words.
+                <br>
+                But there is still one thing left...
+            </p>
+
+            <div class="surpriseLine"></div>
+
+            <button id="surpriseButton" class="surpriseButton" type="button">
+                TAP TO REVEAL ✨
+            </button>
+
+            <div class="surpriseTapHint">don't rush this one ↓</div>
+        </div>
+
+        <div id="surpriseOverlay" class="surpriseOverlay" aria-hidden="true">
+            <div class="surpriseOverlayGlow"></div>
+            <button id="surpriseClose" class="surpriseClose" type="button" aria-label="Close surprise">×</button>
+
+            <div class="surpriseRevealCard">
+                <div class="surpriseOverline">FOR YOU, MEGHANA</div>
+
+                <div class="surprisePhotoFrame">
+                    <img src="photos/WhatsApp Image 2026-09-04 at 15.55.37 (25).jpeg" alt="A special memory">
+                </div>
+
+                <div class="surpriseHeart">♥</div>
+
+                <div class="surpriseMessage">
+                    <p>
+                        Some memories are ordinary when they happen...
+                        <br>
+                        and priceless when we look back.
+                    </p>
+
+                    <p class="surpriseFinalThought">
+                        And I'm really glad
+                        <br>
+                        our story has those memories. 🫶🏻
+                    </p>
+                </div>
+
+                <div class="surpriseBottom">SOME THINGS ARE BETTER FELT THAN SAID.</div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- =========================
+         09 — MAKE A WISH
+    ========================== -->
+    <section id="cakeMoment" class="cakeMoment">
+        <div class="cakeAmbient"></div>
+        <div class="cakeTiny">ONE LAST BIRTHDAY MOMENT</div>
+        <h3>Make a wish, Meghana...</h3>
+        <p class="cakeSub">Before the story ends, let's celebrate properly.</p>
+
+        <div class="cakeStage" aria-label="Birthday cake with candles">
+            <div class="cakeGlow"></div>
+            <div class="cakeCandles">
+                <div class="candle"><i></i><b></b></div>
+                <div class="candle"><i></i><b></b></div>
+                <div class="candle"><i></i><b></b></div>
+                <div class="candle"><i></i><b></b></div>
+                <div class="candle"><i></i><b></b></div>
+            </div>
+            <div class="cakeTop">
+                <span>HAPPY</span>
+            </div>
+            <div class="cakeBody">
+                <div class="cakeCream c1"></div><div class="cakeCream c2"></div><div class="cakeCream c3"></div>
+            </div>
+            <div class="cakePlate"></div>
+            <div class="cakeKnife" aria-hidden="true"></div>
+        </div>
+
+        <button id="blowCandles" class="cakeAction" type="button">BLOW OUT THE CANDLES 🕯️</button>
+        <button id="cutCake" class="cakeAction secondaryCakeAction" type="button" disabled>CUT THE CAKE 🎂</button>
+
+        <div id="cakeWish" class="cakeWish" aria-live="polite">
+            <div class="wishSpark">✦ ✧ ✦</div>
+            <h4>Wish made. ❤️</h4>
+            <p>Now let's cut the cake and keep the celebration going.</p>
+        </div>
+    </section>
+
+    <!-- =========================
+         FINAL CINEMATIC CLIMAX
     ========================== -->
 
     <section id="final">
+        <div class="finalAurora"></div>
+        <div class="finalStars" aria-hidden="true"></div>
 
-        <div class="finalReveal">
+        <div class="finalReveal cinematicFinalContent">
+            <div class="finalTiny">THIS IS THE LAST PAGE...</div>
 
-            <div class="finalTiny">
-                YOU MADE IT TO THE END...
+            <div class="finalPause">So before it ends...</div>
+
+            <div class="finalBreath">
+                <span>just</span>
+                <span>one</span>
+                <span>last</span>
+                <span>thing.</span>
             </div>
-
-
-            <div class="finalPause">
-                But honestly...
-            </div>
-
-
-            <h3 class="finalWish">
-
-                I just wanted
-                <br>
-                you to know...
-
-            </h3>
-
 
             <p class="finalThought">
-
                 Some people enter our lives
                 <br>
                 and quietly become part of our memories.
+                <br><br>
+                And one word which I want to say from the bottom of my heart,
                 <br>
-                    And one word which i want to say from the bottom of my heart,
-                    <br>
-                             I love you more than you know.
-                             <br>
-                    Expressing love in words is not just a simple thing,
-                    <br>
-                    but your place in my heart never be replaced.🤍🫂    
-                    <br>    
-                             
+                I love you more than you know.
+                <br><br>
+                I can't express my love for you in words.
+                <br>
+                The place you hold in my heart can never be replaced🤍🫂
+                <br><br>
+                It's very difficult to stay far away from you and not talk to you.
+                But whether you are with me or not, wherever you are, I want you to be happy.
+                <br>
+                I miss the days we used to live together so much.
             </p>
 
-            <div class="BirthdayFinal">
-                <br>
-                Once again Happiest birthday
-            </div>
+            <div class="finalDivider"><span></span></div>
 
-            <div class="finalname">
+            <div class="birthdayEnding cinematicBirthdayEnding">
+                Once again, Happiest birthday
                 <br>
-                My September Gurll,
+                <strong>My September Gurll,</strong>
                 <br>
-              LOVE YOUUU SOOO MUCHHHH  ❤️
+                <span>LOVE YOUUU SOOO MUCHHHH ❤️</span>
             </div>
-
 
             <p class="finalHope">
-
                 I hope this year gives you
                 <br>
                 everything you've been wishing for.
-
             </p>
 
-
             <div class="finalSignature">
-
                 — from someone who'll always
                 <br>
                 treasure these memories 🫶🏻
-
             </div>
 
+            <div class="finalEndMark">✦</div>
+            <div class="finalEndText">END OF THIS LITTLE STORY</div>
         </div>
-
     </section>
 
+
+    
+<!-- CINEMATIC UI -->
+<div class="scrollProgress" id="scrollProgress"></div>
+<div class="chapterHUD" id="chapterHUD" aria-hidden="true">
+  <span id="chapterNumber">01</span>
+  <span id="chapterLabel">THE BEGINNING</span>
+</div>
+<button class="backTop" id="backTop" type="button" aria-label="Back to top">↑</button>
 
     <!-- JAVASCRIPT -->
 
